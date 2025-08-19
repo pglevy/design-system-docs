@@ -133,6 +133,7 @@ a!headerContentLayout(
           a!sectionLayout(
             label: "Checklist Tasks",
             labelSize: "SMALL",
+            labelHeadingTag: "H2",
             labelColor: "STANDARD",
             contents: a!cardLayout(
               shape: "SEMI_ROUNDED",
@@ -168,7 +169,7 @@ a!headerContentLayout(
                                   color: "SECONDARY",
                                   size: "SMALL",
                                   saveInto: {}/* No action for mockup */
-                                  
+
                                 )
                               )
                             )
@@ -338,6 +339,7 @@ a!headerContentLayout(
           a!sectionLayout(
             label: "Details",
             labelSize: "SMALL",
+            labelHeadingTag: "H2",
             labelColor: "STANDARD",
             contents: a!cardLayout(
               shape: "SEMI_ROUNDED",
@@ -415,6 +417,7 @@ a!headerContentLayout(
           a!sectionLayout(
             label: "Funding",
             labelSize: "SMALL",
+            labelHeadingTag: "H2",
             labelColor: "STANDARD",
             contents: a!cardLayout(
               shape: "SEMI_ROUNDED",
@@ -460,7 +463,7 @@ a!headerContentLayout(
             a!sectionLayout(
               label: "Active Awards",
               labelSize: "SMALL",
-              labelHeadingTag: "H3",
+              labelHeadingTag: "H2",
               labelColor: "STANDARD",
               contents: {
                 a!cardLayout(
@@ -566,7 +569,7 @@ a!headerContentLayout(
                             icon: "spinner",
                             color: "SECONDARY",
                             name: "80AFRC17F0239",
-                            cs: "James Lee",
+                            cs: "Kevin Lu",
                             dept: "Theresa Jones",
                             role: "Type 1",
                             team: "Front-End Components",
@@ -588,7 +591,7 @@ a!headerContentLayout(
                             color: "SECONDARY",
                             name: "80AFRC17P0011",
                             dept: "Theresa Jones",
-                            cs: "James Lee",
+                            cs: "Kevin Lu",
                             role: "Type 2",
                             team: "Accounts Payable",
                             pto: 2,
@@ -608,7 +611,7 @@ a!headerContentLayout(
                             icon: "check-circle",
                             color: "POSITIVE",
                             name: "80AFRC18C0018",
-                            cs: "James Lee",
+                            cs: "Kevin Lu",
                             dept: "Charles Parker",
                             role: "Type 3",
                             team: "User Acceptance Testing",
@@ -937,8 +940,7 @@ a!headerContentLayout(
                   shape: "SEMI_ROUNDED",
                   padding: "STANDARD",
                   marginBelow: "NONE",
-                  showBorder: false,
-                  showShadow: true
+                  borderColor: "#EDEEFA"
                 )
               }
             )
@@ -950,7 +952,7 @@ a!headerContentLayout(
             a!sectionLayout(
               label: "Awards by Status",
               labelSize: "SMALL",
-              labelHeadingTag: "H3",
+              labelHeadingTag: "H2",
               labelColor: "STANDARD",
               contents: {
                 a!cardLayout(
@@ -1036,15 +1038,14 @@ a!headerContentLayout(
                   shape: "SEMI_ROUNDED",
                   padding: "STANDARD",
                   marginBelow: "STANDARD",
-                  showBorder: false,
-                  showShadow: true
+                  borderColor: "#EDEEFA"
                 )
               }
             ),
             a!sectionLayout(
               label: "Funds Obligated",
               labelSize: "SMALL",
-              labelHeadingTag: "H3",
+              labelHeadingTag: "H2",
               labelColor: "STANDARD",
               contents: {
                 a!cardLayout(
@@ -1099,15 +1100,14 @@ a!headerContentLayout(
                   shape: "SEMI_ROUNDED",
                   padding: "STANDARD",
                   marginBelow: "STANDARD",
-                  showBorder: false,
-                  showShadow: true
+                  borderColor: "#EDEEFA"
                 )
               }
             ),
             a!sectionLayout(
               label: "Funds Spent",
               labelSize: "SMALL",
-              labelHeadingTag: "H3",
+              labelHeadingTag: "H2",
               labelColor: "STANDARD",
               contents: {
                 a!cardLayout(
@@ -1158,8 +1158,7 @@ a!headerContentLayout(
                   shape: "SEMI_ROUNDED",
                   padding: "STANDARD",
                   marginBelow: "STANDARD",
-                  showBorder: false,
-                  showShadow: true
+                  borderColor: "#EDEEFA"
                 )
               },
               marginBelow: "STANDARD"
@@ -1167,7 +1166,7 @@ a!headerContentLayout(
             a!sectionLayout(
               label: "Socio-Economic Targets",
               labelSize: "SMALL",
-              labelHeadingTag: "H3",
+              labelHeadingTag: "H2",
               labelColor: "STANDARD",
               contents: {
                 a!cardLayout(
@@ -1323,8 +1322,7 @@ a!headerContentLayout(
                   shape: "SEMI_ROUNDED",
                   padding: "STANDARD",
                   marginBelow: "STANDARD",
-                  showBorder: false,
-                  showShadow: true
+                  borderColor: "#EDEEFA"
                 )
               }
             ),
@@ -2333,6 +2331,6 @@ a!headerContentLayout(
       }
     )
   },
-  backgroundColor: "#FAFAFA"
+  backgroundColor: "#FAFAFC"
 )
 ```
