@@ -8,37 +8,56 @@ Facilitate user input by using the appropriate form style and input types for ea
 
 ![](https://github.com/user-attachments/assets/943d8b37-9cba-44af-a07b-ddd2deb8e500)
 
-## Design
-![](https://github.com/user-attachments/assets/1023e7c2-2f86-42d4-a2dd-01d946d19c80)
-Form in a dialog
-<br></br>
+## Overview
 
-Forms serve as a way for users to have a conversation with our products. Great form design enhances the ability for the user to successfully complete their tasks. 
+Forms serve as a way for users to have a conversation with our products. Great form design enhances the ability for the user to successfully complete their tasks. Use forms to guide users through sequential steps for completing a task, and to break long forms up into more manageable components.
 
 Every form needs to have a header, content and form navigation. A form can be used in a site page or in a dialog.
 
-### Usage
+## Design Guidelines
 
-#### Dialog
+### When to Use Forms
+
+Use this pattern as a starting point for basic forms. The [form layout component](https://docs.appian.com/suite/help/25.3/Form_Layout.html) makes it easy to automate some of these best practices, which include:
+
+- Showing the form title in the header
+- Adding submit and cancel buttons, with the recommended styling for both, at the bottom of the form
+- If you have a record action that is configured to open in a dialog, the buttons are automatically fixed to the bottom of the dialog and will stay in view as the user scrolls
+
+### Form Types
+
+#### Single-Step Forms
+Use for simple data collection that can be completed quickly without overwhelming the user.
+
+#### Multi-Step Forms (Wizards)
+Use wizards to guide users through sequential steps for completing a task. Wizards also help to break long forms up into more manageable components.
+
+**Don't** design wizards that require users to frequently reference previous steps to complete the current step.
+
+### Form Layout Options
+
+![](https://github.com/user-attachments/assets/1023e7c2-2f86-42d4-a2dd-01d946d19c80)
+Form in a dialog
+
+#### Dialog Forms
 ![](https://github.com/user-attachments/assets/2be94769-e053-4db8-8631-6020efe1adeb)
-In multi-step forms, place the “Back” button first followed by the “Cancel” button next left-aligned. Right align the submit or next action.
+In multi-step forms, place the "Back" button first followed by the "Cancel" button next left-aligned. Right align the submit or next action.
 
 ![](https://github.com/user-attachments/assets/556b8845-d773-47ab-81c3-46a8271e2ca0)
 Provide confirmation upon submission
-<br></br>
 
 Checklist:
 |Item|Type|
 |--- |--- |
-|Use “Solid” style for the “submit” or “next” action (in multi-step forms)|Buttons|
-|Use “Link” style for the “cancel” action|Buttons|
-|Use “Outline” style for “back” navigation in multi-step forms|Buttons|
-|Use “Update” (not “Edit”) for the “submit” action when a user is modifying an item|Buttons|
-|In multi-step forms, place the “Back” button first followed by the “Cancel” button next left-aligned. Right align the submit or next action.|Buttons|
+|Use "Solid" style for the "submit" or "next" action (in multi-step forms)|Buttons|
+|Use "Link" style for the "cancel" action|Buttons|
+|Use "Outline" style for "back" navigation in multi-step forms|Buttons|
+|Use "Update" (not "Edit") for the "submit" action when a user is modifying an item|Buttons|
+|In multi-step forms, place the "Back" button first followed by the "Cancel" button next left-aligned. Right align the submit or next action.|Buttons|
 |Stack buttons on mobile in the order as prescribed (see example image)|Buttons|
 |In related actions, the form header should match the action Display Name (button label)|Buttons|
 |Verbs in the header (e.g.: Create Case) should match the submit button label and any button label used to launch the form|Content|
-|Use “Update” (not “Edit”) when a user is modifying an item|Content|
+|Use "Update" (not "Edit") when a user is modifying an item|Content|
 |Group related fields close to each other as much as possible to minimize context switching|Content|
 |If there is a required input field, add instructions under the form header that specifies - "Mandatory fields are marked with an asterisk (*)"|Content|
 |Use the a!FormLayout component|Dialogs|
@@ -46,41 +65,62 @@ Checklist:
 |Use a dialog size that matches field width. Avoid using a Large dialog size for sparse forms.|Dialogs|
 |Place fields in one column as much as possible|Dialogs|
 |Set SkipAutoFocus to True|Dialogs|
-|The submit action of the form should match the form header. Example: If the form header is “Update Status”, then the submit action of the form should state “Update”|Dialogs|
-|In a multi-step form, use the milestone component to indicate progress|Progress|
-|In a multi-step form, avoid specifying a header label for the step. The milestone step label is sufficient.|Progress|
-|In a form with 3+ steps, provide a review step that lists all the fields as read -only. Allow the user to navigate back to update information.|Progress|
-|Provide confirmation upon submission|Progress|
+|The submit action of the form should match the form header. Example: If the form header is "Update Status", then the submit action of the form should state "Update"|Dialogs|
 
-#### Site Page
+#### Site Page Forms
 ![](https://github.com/user-attachments/assets/32be4251-0458-4e04-9b6b-3de88e0b3520)
-In a form with 3+ steps, provide a review step that lists all the fields as read -only. Allow the user to navigate back to update information.
+In a form with 3+ steps, provide a review step that lists all the fields as read-only. Allow the user to navigate back to update information.
 
 Checklist:
 |Item|Type|
 |--- |--- |
-|Use “Solid” style for the “submit” or “next” action (in multi-step forms)|Buttons|
-|Use “Link” style for the “cancel” action|Buttons|
-|Use “Outline” style for “back” navigation in multi-step forms|Buttons|
-|Use “Update” (not “Edit”) for the “submit” action when a user is modifying an item|Buttons|
-|In multi-step forms, place the “Back” button first followed by the “Cancel” button next left-aligned. Right align the submit or next action.|Buttons|
+|Use "Solid" style for the "submit" or "next" action (in multi-step forms)|Buttons|
+|Use "Link" style for the "cancel" action|Buttons|
+|Use "Outline" style for "back" navigation in multi-step forms|Buttons|
+|Use "Update" (not "Edit") for the "submit" action when a user is modifying an item|Buttons|
+|In multi-step forms, place the "Back" button first followed by the "Cancel" button next left-aligned. Right align the submit or next action.|Buttons|
 |Stack buttons on mobile in the order as prescribed (see example image)|Buttons|
 |In related actions, the form header should match the action Display Name (button label)|Buttons|
 |Verbs in the header (e.g.: Create Case) should match the submit button label and any button label used to launch the form|Content|
-|Use “Update” (not “Edit”) when a user is modifying an item|Content|
+|Use "Update" (not "Edit") when a user is modifying an item|Content|
 |Group related fields close to each other as much as possible to minimize context switching|Content|
 |If there is a required input field, add instructions under the form header that specifies - "Mandatory fields are marked with an asterisk (*)"|Content|
+
+## Wizard Patterns
+
+### Wizard with Milestones
+
+Use the [milestone component](https://docs.appian.com/suite/help/25.3/Milestone_Component.html) to show the user's progress. Include links on the milestone component when you want users to easily navigate to previous steps.
+
+Checklist:
+|Item|Type|
+|--- |--- |
 |In a multi-step form, use the milestone component to indicate progress|Progress|
 |In a multi-step form, avoid specifying a header label for the step. The milestone step label is sufficient.|Progress|
 |In a form with 3+ steps, provide a review step that lists all the fields as read -only. Allow the user to navigate back to update information.|Progress|
 |Provide confirmation upon submission|Progress|
 
-### Fields
+**Don't** use a horizontal milestone component when there are a large number of steps, as this can result in a cluttered look. If a wizard contains more than 5 or 6 steps, it's worthwhile to consider a side navigation bar instead.
+
+### Wizard with Side Navigation Bar
+
+Instead of showing wizard steps in a milestone component, you may choose to implement a side navigation bar using a [card layout](https://docs.appian.com/suite/help/25.3/card_layout.html) and [rich text display](https://docs.appian.com/suite/help/25.3/Rich_Text_Component.html) component in a fixed-width column. Consider this approach if you want more control over the appearance of the wizard navigation. This approach also works well when there are too many steps to comfortably fit in a milestone component or when each step in the wizard has a relatively narrow interface. Utilizing available horizontal space to display the navigation also reduces vertical scrolling.
+
+### Progressive Disclosure
+
+For wizards with many steps, use this pattern to break steps up into sub-steps. Only showing the sub-steps for the current step reduces clutter and makes it easier for users to navigate the form.
+
+For forms that can't easily be completed in one session, consider providing a button for users to save their progress and return later. In this pattern, a "Save my progress" button is placed underneath the wizard.
+
+## Field Guidelines
+
 ![](https://github.com/user-attachments/assets/4a3978f7-245b-42e6-8a5d-5f4f78c79304)
 Use the instructions parameter to provide information vital to form completion
 
 ![](https://github.com/user-attachments/assets/8cc52179-593c-4af3-9e58-3407a675850a)
 Use field level validation as much as possible. Define the error and provide guidance on how to resolve it. Avoid generic error messages. Do not disable a button, instead let the user click and view the error to understand what is missing or incorrect
+
+### Field Best Practices
 
 Checklist:
 |Item|Type|
@@ -112,8 +152,24 @@ Checklist:
 |Define the error and provide guidance on how to resolve it. Avoid generic error messages (e.g.: "A value is required")|Validation|
 |Do not disable the submit or next button due to a validation error. Allow the user to click the button and view the validation error in the field.|Validation|
 
+## Accessibility Guidelines
 
-### When to Use Inline Dialogs vs. Modals
+### Accessibility Text
+Always include `accessibilityText` parameters for form elements to ensure screen reader compatibility:
+
+- **Completed Steps**: `accessibilityText: "Completed Step (1 of 6)"`
+- **Current Step**: `accessibilityText: "Current Step (2 of 6)"`
+- **Future Steps**: `accessibilityText: "Future Step (3 of 6)"`
+- **Sections**: `accessibilityText: "Current section"` or `"Completed section"`
+
+### Form Navigation
+In both custom wizards and wizard layouts, Appian automatically handles the page scrolling between each step of the wizard. This means that whenever a user navigates to the next step, the page will automatically scroll to the top of the page.
+
+To take advantage of this, make sure that you don't have multiple read-only components—elements that the user does not interact with—that affects the automatic page scrolling.
+
+Additionally, if you are using a form layout in a custom wizard, make sure that the buttons or dynamic links that control form navigation are placed at the bottom of the form layout.
+
+## When to Use Inline Dialogs vs. Modals
 
 |          | ![](https://github.com/user-attachments/assets/353d5082-710b-4bde-8311-b570a7d1f3e9) Use an Inline Dialog When| ![](https://github.com/user-attachments/assets/26dd1986-fe53-49ca-b226-a66b3df7a705) Use a Modal When |
 |----------|---------|----------|
@@ -122,9 +178,52 @@ Checklist:
 |**Contextual Awareness**|Visibility of the editable content and the parent page is necessary|Full attention to the task is necessary without the need for referring back to the original context|
 |**Progressive Disclosure**|No progressive disclosure is needed|Additional fields or options need to be revealed progressively|
 
+## Confirmation and Review Pages
+
+Confirmation and review pages reassure users of the successful completion of a form and can set expectations for what to do next.
+
+### Confirmation Page
+Use confirmation pages to:
+- Acknowledge successful form submission
+- Provide next steps or expectations
+- Include relevant reference numbers or contact information
+- Set user expectations for follow-up communications
+
+## Additional Resources
+
+### Technical Implementation
+- [Form Layout Component Documentation](https://docs.appian.com/suite/help/25.3/Form_Layout.html) - Complete reference for the a!formLayout() component
+- [Wizard Layout Component](https://docs.appian.com/suite/help/25.3/Wizard_Layout.html) - Multi-step form implementation guide
+- [Milestone Component](https://docs.appian.com/suite/help/25.3/Milestone_Component.html) - Progress indicators for wizards
+- [Card Layout Component](https://docs.appian.com/suite/help/25.3/card_layout.html) - Container layouts for form sections
+- [Rich Text Display Component](https://docs.appian.com/suite/help/25.3/Rich_Text_Component.html) - Text formatting and display options
+- [Building Accessible Applications](https://docs.appian.com/suite/help/25.3/Accessibility_Best_Practices.html) - Accessibility implementation guidelines
+
+### Design Patterns
+- **Single-Step Forms**: Simple data collection with clear submit/cancel actions
+- **Multi-Step Wizards**: Sequential form completion with progress tracking
+- **Confirmation Pages**: Success acknowledgment with next steps guidance
+- **Progressive Disclosure**: Revealing form sections based on user input
+- **Inline Dialogs vs. Modals**: Choosing the right interaction pattern based on complexity
+- **Review and Edit Patterns**: Allowing users to modify previous inputs
+
+### Related Components
+- [Header Content Layout](https://docs.appian.com/suite/help/25.3/Header_Content_Layout.html) - Page-level form containers
+- [Section Layout](https://docs.appian.com/suite/help/25.3/Section_Layout.html) - Grouping related form fields
+- [Columns Layout](https://docs.appian.com/suite/help/25.3/Columns_Layout.html) - Multi-column form arrangements
+- [Side by Side Layout](https://docs.appian.com/suite/help/25.3/Side_By_Side_Layout.html) - Horizontal field alignment
+- [Button Array Layout](https://docs.appian.com/suite/help/25.3/Button_Array_Layout.html) - Form action button placement
+- [Stamp Field](https://docs.appian.com/suite/help/25.3/Stamp_Field.html) - Status indicators and progress markers
+
+### Validation and Error Handling
+- [Form Validation Best Practices](https://docs.appian.com/suite/help/25.3/Form_Validation.html) - Field-level and form-level validation
+- [Error Message Guidelines](https://docs.appian.com/suite/help/25.3/Error_Messages.html) - Clear, actionable error communication
+- [Required Field Indicators](https://docs.appian.com/suite/help/25.3/Required_Fields.html) - Marking mandatory form fields
+- [Input Format Validation](https://docs.appian.com/suite/help/25.3/Input_Validation.html) - Data format checking and feedback
+
 ## Development
 
-### Dialog Example 1
+### Dialog Example 1: Confirmation Page
 ```
 a!formLayout(
   titleBar: a!headerTemplateFull(
@@ -138,7 +237,8 @@ a!formLayout(
       backgroundColor: "POSITIVE",
       contentColor: "STANDARD",
       align: "CENTER",
-      marginBelow: "MORE"
+      marginBelow: "MORE",
+      accessibilityText: "Success confirmation"
     ),
     a!richTextDisplayField(
       labelPosition: "COLLAPSED",
@@ -180,7 +280,7 @@ a!formLayout(
 )
 ```
 
-### Dialog Example 2
+### Dialog Example 2: Multi-Step Wizard with Accessibility
 ```
 a!localVariables(
   local!firstName,
@@ -210,22 +310,26 @@ a!localVariables(
           a!textField(
             label: "First Name",
             value: local!firstName,
-            saveInto: local!firstName
+            saveInto: local!firstName,
+            accessibilityText: "Enter your first name"
           ),
           a!textField(
             label: "Last Name",
             value: local!lastName,
-            saveInto: local!lastName
+            saveInto: local!lastName,
+            accessibilityText: "Enter your last name"
           ),
           a!textField(
             label: "Organization",
             value: local!organization,
-            saveInto: local!organization
+            saveInto: local!organization,
+            accessibilityText: "Enter your organization name"
           ),
           a!textField(
             label: "Job Title",
             value: local!jobTitle,
-            saveInto: local!jobTitle
+            saveInto: local!jobTitle,
+            accessibilityText: "Enter your job title"
           ),
           a!dropdownField(
             label: "Country",
@@ -233,32 +337,41 @@ a!localVariables(
             choiceLabels: local!countryChoices,
             choiceValues: local!countryChoiceValues,
             value: local!country,
-            saveInto: local!country
+            saveInto: local!country,
+            accessibilityText: "Select your country from the dropdown"
           )
         }
       ),
-      a!wizardStep(label: "Case Details"),
-      a!wizardStep(label: "Review")
+      a!wizardStep(
+        label: "Case Details",
+        accessibilityText: "Step 2 of 3: Case Details"
+      ),
+      a!wizardStep(
+        label: "Review",
+        accessibilityText: "Step 3 of 3: Review your information"
+      )
     },
     showButtonDivider: true,
     secondaryButtons: {
       a!buttonWidget(
         label: "Cancel",
-        style: if(fv!isFirstStep, "OUTLINE", "LINK")
+        style: if(fv!isFirstStep, "OUTLINE", "LINK"),
+        accessibilityText: "Cancel form submission"
       )
     },
     primaryButtons: {
       a!buttonWidget(
         label: "Create",
         style: "SOLID",
-        showWhen: fv!isLastStep
+        showWhen: fv!isLastStep,
+        accessibilityText: "Submit case creation form"
       )
     }
   )
 )
 ```
 
-### Site Page
+### Site Page Example: Multi-Step Form with Progress Indicator
 ```
 a!headerContentLayout(
   header: a!cardLayout(
@@ -277,7 +390,8 @@ a!headerContentLayout(
         align: "LEFT"
       )
     },
-    marginBelow: "NONE"
+    marginBelow: "NONE",
+    accessibilityText: "Form header: Create Case"
   ),
   contents: {
     a!columnsLayout(
@@ -295,7 +409,8 @@ a!headerContentLayout(
                   item: a!stampField(
                     size: "TINY",
                     icon: "check",
-                    backgroundColor: "ACCENT"
+                    backgroundColor: "ACCENT",
+                    accessibilityText: "Completed Step"
                   )
                 ),
                 a!sideBySideItem(
@@ -322,7 +437,8 @@ a!headerContentLayout(
                   item: a!stampField(
                     size: "TINY",
                     icon: "check",
-                    backgroundColor: "ACCENT"
+                    backgroundColor: "ACCENT",
+                    accessibilityText: "Completed Step"
                   )
                 ),
                 a!sideBySideItem(
@@ -349,7 +465,8 @@ a!headerContentLayout(
                   item: a!stampField(
                     size: "TINY",
                     text: "3",
-                    backgroundColor: "ACCENT"
+                    backgroundColor: "ACCENT",
+                    accessibilityText: "Current Step (3 of 3)"
                   )
                 ),
                 a!sideBySideItem(
@@ -547,12 +664,14 @@ a!headerContentLayout(
                         a!buttonWidget(
                           label: "BACK",
                           style: "OUTLINE",
-                          saveInto: {}
+                          saveInto: {},
+                          accessibilityText: "Go back to previous step"
                         ),
                         a!buttonWidget(
                           label: "CANCEL",
                           style: "LINK",
-                          saveInto: {}
+                          saveInto: {},
+                          accessibilityText: "Cancel form submission"
                         )
                       }
                     )
@@ -563,7 +682,8 @@ a!headerContentLayout(
                         a!buttonWidget(
                           label: "CREATE CASE",
                           style: "SOLID",
-                          saveInto: {}
+                          saveInto: {},
+                          accessibilityText: "Submit case creation form"
                         )
                       }
                     )
@@ -597,7 +717,7 @@ a!headerContentLayout(
                 a!richTextDisplayField(
                   value: {
                     a!richTextItem(
-                      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                      text: "After submitting your case, you will receive a confirmation email with your case number. Our support team will review your request and respond within 24 hours. You can track the status of your case through your account dashboard.",
                       style: "PLAIN"
                     )
                   },
@@ -605,7 +725,8 @@ a!headerContentLayout(
                 )
               },
               padding: "STANDARD",
-              marginBelow: "STANDARD"
+              marginBelow: "STANDARD",
+              accessibilityText: "Information about next steps after form submission"
             )
           }
         ),
@@ -616,4 +737,149 @@ a!headerContentLayout(
 )
 ```
 
-
+### Wizard with Side Navigation Example
+```
+a!localVariables(
+  local!currentStep: 1,
+  local!steps: {
+    "Personal Information",
+    "Contact Details", 
+    "Preferences",
+    "Account Setup",
+    "Security Settings",
+    "Review & Submit"
+  },
+  a!columnsLayout(
+    columns: {
+      /* Side Navigation */
+      a!columnLayout(
+        width: "NARROW",
+        contents: {
+          a!cardLayout(
+            contents: {
+              a!forEach(
+                items: local!steps,
+                expression: a!cardLayout(
+                  contents: {
+                    a!sideBySideLayout(
+                      items: {
+                        a!sideBySideItem(
+                          width: "MINIMIZE",
+                          item: a!stampField(
+                            size: "TINY",
+                            text: fv!index,
+                            backgroundColor: if(
+                              fv!index < local!currentStep,
+                              "POSITIVE",
+                              if(
+                                fv!index = local!currentStep,
+                                "ACCENT", 
+                                "SECONDARY"
+                              )
+                            ),
+                            contentColor: "STANDARD",
+                            accessibilityText: if(
+                              fv!index < local!currentStep,
+                              "Completed Step (" & fv!index & " of " & length(local!steps) & ")",
+                              if(
+                                fv!index = local!currentStep,
+                                "Current Step (" & fv!index & " of " & length(local!steps) & ")",
+                                "Future Step (" & fv!index & " of " & length(local!steps) & ")"
+                              )
+                            )
+                          )
+                        ),
+                        a!sideBySideItem(
+                          item: a!richTextDisplayField(
+                            value: a!richTextItem(
+                              text: fv!item,
+                              style: if(fv!index = local!currentStep, "STRONG", "PLAIN"),
+                              color: if(fv!index <= local!currentStep, "STANDARD", "SECONDARY")
+                            ),
+                            accessibilityText: fv!item & " - " & if(
+                              fv!index < local!currentStep,
+                              "Completed",
+                              if(
+                                fv!index = local!currentStep,
+                                "Current Step",
+                                "Not Started"
+                              )
+                            )
+                          )
+                        )
+                      },
+                      alignVertical: "MIDDLE"
+                    )
+                  },
+                  style: "NONE",
+                  padding: "LESS",
+                  marginBelow: "STANDARD"
+                )
+              )
+            },
+            style: "#F8F9FA",
+            padding: "MORE"
+          )
+        }
+      ),
+      /* Main Content */
+      a!columnLayout(
+        contents: {
+          a!cardLayout(
+            contents: {
+              a!richTextDisplayField(
+                value: a!richTextItem(
+                  text: "Step " & local!currentStep & ": " & index(local!steps, local!currentStep, ""),
+                  style: "STRONG",
+                  size: "LARGE"
+                ),
+                marginBelow: "MORE"
+              ),
+              /* Step content would go here */
+              a!textField(
+                label: "Sample Field",
+                placeholder: "Enter information for step " & local!currentStep,
+                accessibilityText: "Sample input field for step " & local!currentStep
+              )
+            },
+            padding: "MORE"
+          ),
+          /* Navigation Buttons */
+          a!buttonArrayLayout(
+            buttons: {
+              a!buttonWidget(
+                label: "Previous",
+                style: "OUTLINE",
+                showWhen: local!currentStep > 1,
+                saveInto: a!save(local!currentStep, local!currentStep - 1),
+                accessibilityText: "Go to previous step"
+              ),
+              a!buttonWidget(
+                label: "Cancel",
+                style: "LINK",
+                accessibilityText: "Cancel wizard"
+              ),
+              a!buttonWidget(
+                label: if(local!currentStep = length(local!steps), "Submit", "Next"),
+                style: "SOLID",
+                saveInto: if(
+                  local!currentStep < length(local!steps),
+                  a!save(local!currentStep, local!currentStep + 1),
+                  {}
+                ),
+                accessibilityText: if(
+                  local!currentStep = length(local!steps),
+                  "Submit form",
+                  "Go to next step"
+                )
+              )
+            },
+            align: "BETWEEN",
+            marginAbove: "MORE"
+          )
+        }
+      )
+    }
+  )
+)
+```

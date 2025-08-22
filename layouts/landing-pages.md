@@ -5,23 +5,18 @@ last_updated: "2024-12-19"
 
 # Landing Pages
 
-## Design
+Landing pages serve as entry points to applications and websites, providing users with tailored experiences based on their needs and usage patterns. This documentation covers both visitor landing pages for new and occasional users, and employee home pages for frequent users.
 
-### Guidance
+## Overview
 
-**Tailor Content to Target Users**
+Landing pages should be designed with specific user personas and usage patterns in mind. The type of landing page you choose depends on your target audience:
 
-Answer these questions to gain a better understanding of the various user personas viewing the landing page: 
-* What information does each user need to view?
-* What is the minimum amount of information you need to provide to give users context? 
-* What actions do users need to perform, and what information do they need to perform them?  
-* What helpful (but not essential) information can you display under a link that directs users to a separate page? 
+- **Visitor Landing Pages**: Welcome new and occasional users to a website
+- **Employee Home Pages**: Provide personalized experiences for users who frequently use an app
 
-Use dense layouts for experienced, data-intensive users that prefer efficiency. Use a guided experience layout for novice users that prefer a step-by-step approach.
+## Design Patterns
 
-### Variants
-
-#### Dense UI: Two Columns
+### Dense UI: Two Columns
 
 ![](https://github.com/user-attachments/assets/62ba1029-5588-461f-ba5c-607d570374c9)
 
@@ -29,15 +24,26 @@ This layout is structured for users who want to spend most of their time interac
 
 The charts provide the information users need for context but are not required for users to perform daily actions.
 
-#### Dense UI: Three Columns
-![](https://github.com/user-attachments/assets/e322b8a9-50b7-480b-8d68-1f28a0eaf0bc)
+**When to Use:**
+- Users primarily work with record lists
+- Context information is helpful but not essential
+- Users are experienced and prefer efficiency
+- Screen real estate is limited
 
+### Dense UI: Three Columns
+![](https://github.com/user-attachments/assets/e322b8a9-50b7-480b-8d68-1f28a0eaf0bc)
 
 This layout is structured for users who want to spend most of their time on the record list interacting with record details and associated actions.
 
 This layout incorporates multiple records into a single interface. The two columns on the left help the user take action on the records, while the third column lists reference information.
 
-The charts on the right help the user to gather context, but they aren't essential to the user’s day-to-day actions.
+The charts on the right help the user to gather context, but they aren't essential to the user's day-to-day actions.
+
+**When to Use:**
+- Users work with multiple related records
+- Reference information is frequently needed
+- Users have large screens or high resolution displays
+- Complex workflows require multiple data views
 
 ![](https://github.com/user-attachments/assets/df9fa84f-693b-4f82-8d5c-8b20ad2cd44e)
 
@@ -51,7 +57,7 @@ Use the Record Action Component
 
 Preserve Layout Consistency When Data Changes
 
-#### Guided Experience
+### Guided Experience
 ![](https://github.com/user-attachments/assets/333a2fdb-2c57-4eb3-bd1c-318ff53f1e8b)
 
 Only present information that is relevant or important for the user to proceed with their primary task.
@@ -60,7 +66,98 @@ Use a combination of links and tabs to minimize clutter on an interface. Use lan
 
 Present information that is useful for the user to make a decision or conduct an activity. Move secondary information into a separate interface in a separate tab, drill down, or dialog.
 
+**When to Use:**
+- Users are new to the application
+- Tasks are complex and benefit from step-by-step guidance
+- Users visit infrequently and need orientation
+- You want to reduce cognitive load
+- Progressive disclosure improves task completion
+
 Note: The billboard image in the screenshot on the left might be unavailable in your environment and thus has been commented out in the code.
+
+## Information Density Guidelines
+
+### High Information Density
+
+Use high information density when:
+- Users are experienced and comfortable with complex interfaces
+- Efficiency is prioritized over ease of learning
+- Users need to see multiple data points simultaneously
+- Screen real estate is at a premium
+- Users perform repetitive tasks that benefit from quick scanning
+
+### Low Information Density
+
+Use low information density when:
+- Users are new or infrequent
+- Tasks are complex and require focus
+- Error prevention is critical
+- Users need guidance and orientation
+- Accessibility is a primary concern
+
+Employee home pages with larger text, more white space, and fewer elements tend to look more approachable and modern. Before adding more content to a page, make sure that the added visual load is worthwhile and will provide significant benefit to end users.
+
+## Layout Consistency Best Practices
+
+### Preserve Layout Consistency When Data Changes
+
+- Design layouts that accommodate varying amounts of data
+- Use placeholder content when data is unavailable
+- Maintain consistent spacing and alignment
+- Avoid layout shifts that disrupt user orientation
+- Test layouts with minimum and maximum data scenarios
+
+### Responsive Design Considerations
+
+- Ensure layouts work across different screen sizes
+- Prioritize content based on screen real estate
+- Use progressive disclosure on smaller screens
+- Maintain touch targets and accessibility standards
+- Test on actual devices, not just browser resizing
+
+## Content Strategies
+
+### General
+- Use action-oriented language that clearly communicates purpose
+- Provide helpful links and getting started guides for new users
+- Balance comprehensive information with scannability
+- Implement consistent voice and tone across all landing page elements
+
+### Personalization
+- Show relevant tasks and actions based on user role
+- Display recent or frequently accessed items
+- Customize information density based on user preferences
+- Provide user-configurable dashboard elements
+- Use progressive disclosure for advanced features
+
+## Accessibility Considerations
+
+- Ensure sufficient color contrast for all text
+- Provide keyboard navigation for all interactive elements
+- Use semantic HTML and proper heading structure
+- Include alt text for all meaningful images
+- Test with screen readers and assistive technologies
+- Provide text alternatives for visual information
+
+## Additional Resources
+
+### Technical Implementation
+- [Billboard Layout Documentation](https://docs.appian.com/suite/help/25.3/Billboard_Layout.html) - Details for creating impactful hero sections
+- [Header Content Layout Documentation](https://docs.appian.com/suite/help/25.3/Header_Content_Layout.html) - Guide to page structure and layout patterns
+- [Card Layout Documentation](https://docs.appian.com/suite/help/25.3/Card_Layout.html) - Organizing content sections and interactive elements
+
+### Design Patterns
+- **Visitor Landing Pages**: Focus on orientation, education, and first-time user success with approachable design
+- **Employee Home Pages**: Provide personalized, task-focused experiences for frequent users with appropriate information density
+- **Dense UI Layouts**: Use two or three-column layouts for experienced users who prioritize efficiency over guidance
+- **Guided Experience**: Implement step-by-step approaches for new users with progressive disclosure and clear navigation
+
+### Related Components
+- [Cards](./cards.md) - Essential building blocks for organizing landing page content sections
+- [Grids](./grids.md) - For displaying data lists and record collections on employee home pages
+- [Navigation](./navigation.md) - For implementing tabs, links, and wayfinding elements
+- [Forms](./forms.md) - For interactive elements and user input on landing pages
+- [Charts and Visualizations](./charts.md) - For displaying metrics and KPIs on employee dashboards
 
 ## Development
 
